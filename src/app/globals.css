@@ -1,5 +1,5 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700;1,9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 @theme {
   --color-gold: #C9A96E;
@@ -21,54 +21,23 @@
 }
 
 @layer base {
-  html {
-    background-color: #0C0C0E;
-    color: #F5F0E8;
-  }
+  html { background-color: #0C0C0E; color: #F5F0E8; }
   * { box-sizing: border-box; }
 }
 
 @layer components {
-  .btn-gold {
-    background: linear-gradient(135deg, #C9A96E 0%, #E8D5A3 40%, #C9A96E 60%, #8B6914 100%);
-    color: #0C0C0E;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+  .btn-gold { background: linear-gradient(135deg, #C9A96E 0%, #E8D5A3 40%, #C9A96E 60%, #8B6914 100%); color: #0C0C0E; font-weight: 700; letter-spacing: 0.1em; transition: opacity 0.3s ease, transform 0.3s ease; }
   .btn-gold:hover { opacity: 0.9; transform: translateY(-1px); }
   .luxury-card { background: #1A1A1C; border: 1px solid rgba(201,169,110,0.15); }
   .pillar-card { background: #1A1A1C; border: 1px solid rgba(201,169,110,0.15); transition: border-color 0.3s ease; }
   .pillar-card:hover { border-color: rgba(201,169,110,0.35); }
   .category-overlay { background: linear-gradient(to top, rgba(12,12,14,0.95) 0%, rgba(12,12,14,0.4) 50%, transparent 100%); }
   .category-card { background: #1A1A1C; }
-  .text-gold-gradient {
-    background: linear-gradient(135deg, #C9A96E 0%, #E8D5A3 40%, #C9A96E 60%, #8B6914 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  .text-gold-gradient { background: linear-gradient(135deg, #C9A96E 0%, #E8D5A3 40%, #C9A96E 60%, #8B6914 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .gold-divider { height: 1px; background: linear-gradient(to right, transparent, rgba(201,169,110,0.4), transparent); }
-  .grid-luxury {
-    background-color: #0C0C0E;
-    background-image: linear-gradient(rgba(201,169,110,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.03) 1px, transparent 1px);
-    background-size: 80px 80px;
-  }
-  .ghost-text {
-    font-family: 'Fraunces', Georgia, serif;
-    font-size: 28vw;
-    font-weight: 900;
-    color: rgba(201,169,110,0.025);
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    line-height: 1;
-    pointer-events: none;
-    user-select: none;
-  }
-  .shimmer-scan {
-    background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.06), transparent);
-    animation: shimmer-move 4s ease-in-out infinite;
-  }
+  .grid-luxury { background-color: #0C0C0E; background-image: linear-gradient(rgba(201,169,110,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(201,169,110,0.03) 1px, transparent 1px); background-size: 80px 80px; }
+  .ghost-text { font-family: 'Fraunces', Georgia, serif; font-size: 28vw; font-weight: 900; color: rgba(201,169,110,0.025); text-transform: uppercase; letter-spacing: -0.05em; line-height: 1; pointer-events: none; user-select: none; }
+  .shimmer-scan { background: linear-gradient(to bottom, transparent, rgba(201,169,110,0.06), transparent); animation: shimmer-move 4s ease-in-out infinite; }
   .float-badge { animation: float 6s ease-in-out infinite; }
   .scroll-bounce { animation: bounce-subtle 2s ease-in-out infinite; }
   .animated-gradient { background: #0C0C0E; }
@@ -83,15 +52,6 @@
   .stagger-6 { transition-delay: 0.6s; }
 }
 
-@keyframes shimmer-move {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(800%); }
-}
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-8px); }
-}
-@keyframes bounce-subtle {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(-6px); }
-}
+@keyframes shimmer-move { 0% { transform: translateY(-100%); } 100% { transform: translateY(800%); } }
+@keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-8px); } }
+@keyframes bounce-subtle { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-6px); } }
